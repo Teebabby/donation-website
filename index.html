@@ -117,17 +117,20 @@
       </section>
 
       <!-- Modal -->
-      <div id="crypto-modal" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="hideCryptoModal()">&times;</span>
-          <h2>Donate with Cryptocurrency</h2>
-          <select id="crypto-select" onchange="updateCryptoInfo()">
-            <option value="btc">Bitcoin</option>
-            <option value="eth">Ethereum</option>
-          </select>
-          <p id="wallet-address"></p>
-          <button onclick="hideCryptoModal()">Close</button>
-        </div>
+     <div id="crypto-modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="hideCryptoModal()">&times;</span>
+    <h2>Donate with Cryptocurrency</h2>
+    <select id="crypto-select" onchange="updateCryptoInfo()">
+      <option value="btc">Bitcoin</option>
+      <option value="eth">Ethereum</option>
+    </select>
+    <p id="wallet-address"></p>
+    <button id="copy-button" onclick="copyAddress()">Copy Address</button>
+    <button onclick="hideCryptoModal()">Close</button>
+  </div>
+</div>
+
       </div>
     </section>
     <footer>
