@@ -30,3 +30,16 @@ function updateCryptoInfo() {
     "wallet-address"
   ).textContent = `Wallet Address: ${address}`;
 }
+function copyAddress() {
+  const walletAddress = document.getElementById("wallet-address").textContent.replace("Wallet Address: ", "");
+  
+  // Copy the address to the clipboard
+  navigator.clipboard
+    .writeText(walletAddress)
+    .then(() => {
+      alert("Wallet address copied to clipboard!");
+    })
+    .catch((err) => {
+      console.error("Failed to copy address: ", err);
+    });
+}
