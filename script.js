@@ -2,21 +2,22 @@
 document.getElementById("amount").addEventListener("input", function () {
   document.getElementById("paypal-amount").value = this.value;
 });
-// Wallet addresses for crypto donations
+ 
+ // Wallet addresses for crypto donations
 const walletAddresses = {
   btc: "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",
   eth: "0x4E83362442B8d1bec281594cEa3050c8EB01311C",
 };
-
 // Show the modal for crypto donations
 function showCryptoModal() {
-  document.getElementById("crypto-modal").style.display = "flex";
-  updateCryptoInfo();
+  const modal = document.getElementById("crypto-modal");
+  modal.style.display = "flex"; // Show the modal
 }
 
 // Hide the modal
 function hideCryptoModal() {
-  document.getElementById("crypto-modal").style.display = "none";
+  const modal = document.getElementById("crypto-modal");
+  modal.style.display = "none"; // Hide the modal
 }
 
 // Update the wallet info based on the selected crypto
